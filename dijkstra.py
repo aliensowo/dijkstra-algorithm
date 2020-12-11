@@ -8,6 +8,10 @@ import argparse
 
 
 def pars_csv():
+    """
+    Функция чтения матрицы из файла
+    :return:
+    """
     data = []
 
     graph = {}
@@ -38,6 +42,11 @@ def pars_csv():
 
 
 def pars_csv_f(path):
+    """
+    Функция чтения матрицы из csv файла
+    :param path: путь до фала
+    :return: отформатированный граф
+    """
     data = []
 
     graph = {}
@@ -68,6 +77,13 @@ def pars_csv_f(path):
 
 
 def dijkstra(start, goal, graph):
+    """
+    Функция алгоритма Дейкстры
+    :param start: начальная вершина
+    :param goal: конечная вершина
+    :param graph: отформатированные данные графа
+    :return:
+    """
     queue = []
     heappush(queue, (0, start))
     cost_visited = {start: 0}
@@ -92,6 +108,12 @@ def dijkstra(start, goal, graph):
 
 
 def plot_graph(data, setting):
+    """
+    Функция визализации графа
+    :param data:
+    :param setting:
+    :return:
+    """
     graph_point = []
     for key in data:
         graph_point.append(key)
